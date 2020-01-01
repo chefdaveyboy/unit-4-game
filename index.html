@@ -2,7 +2,47 @@
 <html lang="en-us">
 <head>
     <meta charset="UTF-8">
+    <title>The Crystal Collector</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=MedievalSharp|Uncial+Antiqua&display=swap" rel="stylesheet">
 </head>
+
+<body>
+   <h1>The Crystal Collector</h1>
+   
+   <br>
+
+   <h3>The boss needs you to mine some crystals!  The boss has OCD and doesn't want anymore or any less crystals than he asks for!  Hit the exact number so you can become the <em>Greatest Crystal Collector</em>!</h3>
+   
+   <br>
+   
+   <div>
+       <p id="random-crystal">Target Collection: </p>
+   </div>
+
+   <br>
+
+   <div id="crystals">
+       <img class="crystal-button" src="assets/images/diamond.png">
+       <img class="crystal-button" src="assets/images/super-crystal.png">
+       <img class="crystal-button" src="assets/images/pink-diamond.png">
+       <img class="crystal-button" src="assets/images/blue-crystal.png">
+   </div>
+   
+   <div>
+       <p id="total-crystal">Total Collected: </p>
+   </div>
+
+   <br>
+
+   <div id="scoreboard">
+      <p id="wins">Wins:</p>
+      <br>
+      <p id="losses">Losses:</p>
+   </div>
+
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
 </html>
