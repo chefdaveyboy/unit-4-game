@@ -18,6 +18,19 @@ h3 {
     padding: 10px;
     text-align: center;
 }
+
+p {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    
+}
+
+#crystals {
+    text-align: center;
+    padding: 20px;
+}
+
 .crystal-button {
     height: 100px;
     padding: 10px;
