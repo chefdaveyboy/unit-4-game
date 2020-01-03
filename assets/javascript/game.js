@@ -10,12 +10,13 @@ $("#random-crystal").text("Target Collection: " + targetNumber);
 var currentScore = 0;
 var winCount = 0;
 var lossCount = 0;
-
+//reset function
 function reset() {
+    targetNumber = Math.floor(Math.random() * 101) +19;
     crystalNumber = Math.floor(Math.random() * 12) + 1;
     currentScore = 0;
     $("#random-crystal").text("Target Collection: " + targetNumber);
-    console.log(targetNumber);
+    
 }
     
 
@@ -37,16 +38,20 @@ $(document).ready(function () {
     $(".crystal-button").on("click", function () {
         currentScore = currentScore + parseInt($(this).attr("crystal-value"));
         $("#total-crystal").text("Total Collected: " + currentScore);
-
+    //if the total collected equals the target collection, the player wins!
     if (currentScore === targetNumber) {
         winCount++
+        //adds 1 to the win text
         $("#wins").text("Wins: " + winCount);
+        //game resets
         reset();
     }
-    
+    //if the total collected exceeds the target collection, the player loses!
     else if (currentScore > targetNumber) {
         lossCount++
+        //add 1 to the loss text
         $("#losses").text("Losses: " + lossCount);
+        //game resets
         reset();
     }
     
@@ -57,77 +62,8 @@ $(document).ready(function () {
 })
 
 
-
-// $(document).ready(function button1() {
-
-// var crystalNumber = Math.floor(Math.random() * 12) + 1;
-
-// $("#button1").on("click", function() {
-
-//    $(".crystal-button").attr("crystalvalue", crystalNumber);
-
-//     console.log(crystalNumber);
-
-// })
-
-// })
-
-// $(document).ready(function button2() {
-
-// var crystalNumber = Math.floor(Math.random() * 12) + 1;
-
-// $("#button2").on("click", function() {
-
-//     $(".crystal-button").attr("crystalvalue", crystalNumber);
-
-//     console.log(crystalNumber);
-// })
-
-
-// })
-
-// $(document).ready(function button3() {
-
-// var crystalNumber = Math.floor(Math.random() * 12) + 1;
-
-// $("#button3").on("click", function() {
-
-//     $(".crystal-button").attr("crystalvalue", crystalNumber);
-
-//     console.log(crystalNumber);
-// })
-
-
-// })
-
-// $(document).ready(function button4() {
-
-//     var crystalNumber = Math.floor(Math.random() * 12) + 1;
-
-//     $("#button4").on("click", function() {
-
-//         $(".crystal-button").attr("crystalvalue", crystalNumber);
-    
-//         console.log(crystalNumber);
-//     })
-
-// })
-
-    //Hide the random value until the crystal is selected.
-    //Make sure that each crystal is a different value?
-
-//on click event for when a crystal is clicked on
-    //check to see if the players "score" is equal to the target score.
-    //if score = target, the player wins!
-    //if score < target, the game continues.
-    //if score > target, the game is over.
-
 //create a reset fuction to reset the game after a win or a loss.
-function reset() {
-    targetNumber = Math.floor(Math.random() * 101) + 19;
-    crystalNumber = Math.floor(Math.random() * 12) + 1;
-    currentScore = 0;
-}
+
     //New Target Number
     //New Crystal Values
     //Score counter = 0
