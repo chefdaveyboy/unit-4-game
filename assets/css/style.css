@@ -1,6 +1,8 @@
 body {
     font-family: 'MedievalSharp', cursive;
-    background-image: url(../images/gplaypattern.png);
+    background-image: url(../images/Mine-Pic.jpg);
+    background-size: cover;
+    color: white;
 }
 
 img:hover {
@@ -17,7 +19,7 @@ h3 {
     font-size: 30px;
     margin-left: 100px;
     margin-right: 100px;
-    border: dashed 3px black;
+    border: dashed 3px gold;
     padding: 10px;
     text-align: center;
 }
