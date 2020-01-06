@@ -5,6 +5,8 @@ var targetNumber = Math.floor(Math.random() * 101) +19;
 $("#random-crystal").text("Target Collection: " + targetNumber);
 //assign the random targetNumber to the random-crystal div.
 
+
+// The beginning of trying to figure out how to make sure the crystals are different numbers.
 // var crystalNumber = [1,2,3,4,5,6,7,8,9,10,11,12];
 
 //Create base score values
@@ -14,6 +16,7 @@ var lossCount = 0;
 //reset function
 function reset() {
     targetNumber = Math.floor(Math.random() * 101) +19;
+
     $(".crystal-button").each(function crystalValue() {
         //creates the random number
         crystalNumber = Math.floor(Math.random() * 12) + 1;
@@ -53,10 +56,6 @@ $(document).ready(function () {
         $("#wins").text("Wins: " + winCount);
         //game resets
         reset();
-        targetNumber = Math.floor(Math.random() * 101) +19;
-    crystalNumber = Math.floor(Math.random() * 12) + 1;
-    currentScore = 0;
-    $("#random-crystal").text("Target Collection: " + targetNumber);
     }
     //if the total collected exceeds the target collection, the player loses!
     else if (currentScore > targetNumber) {
